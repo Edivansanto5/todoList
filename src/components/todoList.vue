@@ -21,12 +21,22 @@
         <br><br><br>
 
         <div>
-            <button class="btn-1" @click="mostrarFazendo()">Mostrar Atividades em Andamentos</button>
+            <button class="btn-1" @click="mostrarFazendo()">{{mostrarAndamento}}</button>
             
-            <button @click="mostrarFeito()">Mostrar Atividades Concluidas</button>
+            <button @click="mostrarFeito()">{{mostrarAndamento2}}</button>
         </div>
-        <div v-if="mostrar">
-            <h2>teste04</h2>
+        <div v-if="fazendo">
+            <h2>Lista de items em Andamentos</h2>
+            <ul>
+                <li>items</li>
+                <li>items</li>
+                <li>items</li>
+                <li>items</li>
+            </ul>
+
+        </div>
+        <div v-if="fazendo2">
+            <h2>Lista de items Finalizados</h2>
             <ul>
                 <li>items</li>
                 <li>items</li>
@@ -48,7 +58,10 @@ export default {
         return{
         lista: {},
         listas: [],
-        mostrar:false
+        fazendo:false,
+        fazendo2: false,
+        mostrarAndamento:'Mostrar Atividades em Andamentos',
+        mostrarAndamento2:'Mostrar Atividades Finalizado'
         
         }
         
@@ -59,8 +72,7 @@ export default {
             this.listas.push(this.lista) // add um item na lista
             this.lista = {
                 text: '',
-                listFazendo:[],
-
+            
             }          
         },
         deleta(){
@@ -68,10 +80,23 @@ export default {
 
         },
         mostrarFazendo(){
-            this.mostrar = !this.mostrar
-            console.log('Mostrando atividades em andamentos ')
+            this.fazendo = !this.fazendo
+            if(!this.fazendo){
+                this.mostrarAndamento = 'Mostrar Atividades em Andamentos'
+            }else{
+                this.mostrarAndamento = 'Fechar lista Finalizados'
+            }
+            
+
         },
         mostrarFeito(){
+            this.fazendo2 = !this.fazendo2
+            if(!this.fazendo2){
+                this.mostrarAndamento2 = 'Mostrar Atividades em Andamentos'
+            }else{
+                this.mostrarAndamento2 = 'Fechar lista em Andamentos'
+            }
+            
             console.log('Mostrar atividades Concluidas')
         }
       
@@ -99,9 +124,6 @@ export default {
         margin: 14px;
         font-size: 18px;
         color:#383a47;
-        
-        
-      
     }
     .btn{
         margin: 14px;
