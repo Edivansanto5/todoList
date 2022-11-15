@@ -9,9 +9,9 @@
         <button type="button" @click="addLista()" class="btn"> Enviar</button>
 
         <div v-for="(lista, index) in listas" :key="index" class="div-main">
-            <select class="select ">
+            <select class="select">
                 <option>A fazer</option>
-                <option>Fazendo</option>
+                <option >Fazendo</option>
                 <option>Feito</option>
             </select>
             <span class=" span"> {{ lista.text }} </span> <a class="mr-10" @click="deleta"> 
@@ -39,7 +39,6 @@ export default {
         lista: {},
         listas: [],
        
-
         }
         
     },
@@ -54,11 +53,9 @@ export default {
         deleta(){
         this.listas.pop(this.listas)
         },
-        addFazendo(){
-            console.log('veio aqui')
-            console.log(this.listas)
-
-        }
+       apertou(){
+        console.log('veio aqui')
+       }
     } 
 }
 </script>
