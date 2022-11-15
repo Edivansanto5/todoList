@@ -9,12 +9,10 @@
         <button type="button" @click="addLista()" class="btn"> Enviar</button>
 
         <div v-for="(lista, index) in listas" :key="index" class="div-main">
-            
-            
             <select class="select ">
-                <option >A fazer</option>
-                <option @click="addFazendo()">Fazendo</option>
-                <option >Feito</option>
+                <option>A fazer</option>
+                <option>Fazendo</option>
+                <option>Feito</option>
             </select>
             <span class=" span"> {{ lista.text }} </span> <a class="mr-10" @click="deleta"> 
             <i class="fa-solid fa-trash-can"></i></a>
