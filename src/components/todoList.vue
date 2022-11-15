@@ -7,6 +7,11 @@
 
     <div v-for="(lista, index) in listas" :key="index" >
         <span> {{ lista.text }}</span> <a class="mr-10" @click="deleta"> <i class="fa-solid fa-trash-can"></i></a>
+        <select>
+            <option >A fazer</option>
+            <option >Fazendo</option>
+            <option >Feito</option>
+        </select>
      
     </div>
    
