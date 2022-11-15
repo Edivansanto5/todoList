@@ -3,7 +3,7 @@
         <div class="title">
             <h1>Bem-Vindo ao Gerenciamento de Tarefas</h1>
         </div>
-        <br><br>
+        <br>
         <button class=" status">Status</button> 
         <input  type="text" v-model.trim="lista.text" placeholder="Digite Uma Tarefa aqui"> 
         <button type="button" @click="addLista()" class="btn"> Enviar</button>
@@ -15,7 +15,8 @@
                 <option >Fazendo</option>
                 <option >Feito</option>
             </select>
-            <span class=" span"> {{ lista.text }}</span> <a class="mr-10" @click="deleta"> <i class="fa-solid fa-trash-can"></i></a>
+            <span class=" span"> {{ lista.text }}</span> <a class="mr-10" @click="deleta"> 
+                <i class="fa-solid fa-trash-can"></i></a>
         </div>
         <br>
         <br>
@@ -49,22 +50,23 @@ export default {
 
 <style>
     body{
-        background-color: aqua;
+        background:#383a47 ;
     }   
     .conteiner{ 
-        background-color: pink;
+        background-color:#fff;
         text-align: center;
-        width: 50%;
-        height:50%;
+        max-width: 100%;
+        max-height:100%;
     }
     .title{
-        background: green;
+        color:#383a47 ;
         height: 100px;
         padding-top: 12px;
     }
     .status{
-        width: 60px;
+        width: 72px;
         margin: 14px;
+        font-size: 18;
     }
     .btn{
         
@@ -72,10 +74,14 @@ export default {
         
     }
    .div-main{
-    text-align: justify;
-    background: rgb(128, 0, 75);
-    padding-left: 140px;
-   
-   
+        text-align: justify;
+        color: aqua;
+        font-size: 20px;
+        padding-left: 504px;
+   } 
+   :hover a{
+    color: red;
+    
    }
+
 </style>
