@@ -16,15 +16,25 @@
             </select>
             <span class=" span"> {{ lista.text }} </span> <a class="mr-10" @click="deleta"> 
             <i class="fa-solid fa-trash-can"></i></a>
-              
+    
         </div>
-      
         <br><br><br>
+
         <div>
-            <button class="btn-1">Mostrar Atividades em Andamentos</button>
-            <button class="btn-2">Mostrar Atividades Concluidas</button>
+            <button class="btn-1" @click="mostrarFazendo()">Mostrar Atividades em Andamentos</button>
+            
+            <button @click="mostrarFeito()">Mostrar Atividades Concluidas</button>
         </div>
-        
+        <div v-if="mostrar">
+            <h2>teste04</h2>
+            <ul>
+                <li>items</li>
+                <li>items</li>
+                <li>items</li>
+                <li>items</li>
+            </ul>
+
+        </div>
 
         <br>
         <br>
@@ -38,7 +48,8 @@ export default {
         return{
         lista: {},
         listas: [],
-       
+        mostrar:false
+        
         }
         
     },
@@ -48,14 +59,22 @@ export default {
             this.listas.push(this.lista) // add um item na lista
             this.lista = {
                 text: '',
+                listFazendo:[],
+
             }          
         },
         deleta(){
         this.listas.pop(this.listas)
+
         },
-       apertou(){
-        console.log('veio aqui')
-       }
+        mostrarFazendo(){
+            this.mostrar = !this.mostrar
+            console.log('Mostrando atividades em andamentos ')
+        },
+        mostrarFeito(){
+            console.log('Mostrar atividades Concluidas')
+        }
+      
     } 
 }
 </script>
