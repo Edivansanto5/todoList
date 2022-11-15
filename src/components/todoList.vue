@@ -15,9 +15,16 @@
                 <option >Fazendo</option>
                 <option >Feito</option>
             </select>
-            <span class=" span"> {{ lista.text }}</span> <a class="mr-10" @click="deleta"> 
-                <i class="fa-solid fa-trash-can"></i></a>
+            <span class=" span"> {{ lista.text }} </span> <a class="mr-10" @click="deleta"> 
+            <i class="fa-solid fa-trash-can"></i></a>
+            
+                
         </div>
+        <div>
+            <button class="btn-1">Mostrar Atividades em Andamentos</button>
+            <button class="btn2">Mostrar Atividades Concluidas</button>
+        </div>
+
         <br>
         <br>
   </div>
@@ -56,7 +63,7 @@ export default {
         background-color:#fff;
         text-align: center;
         max-width: 100%;
-        max-height:100%;
+       
     }
     .title{
         color:#383a47 ;
@@ -69,11 +76,13 @@ export default {
         font-size: 18px;
         color:#383a47;
         
+        
       
     }
     .btn{
         margin: 14px;
         color:#383a47 ;
+        border-radius: 5px;
     }
    .div-main{
         text-align: justify;
@@ -88,6 +97,9 @@ export default {
    .select,input,.btn{
     font-size: 18px;
     margin: 4px;
-   }
    
+   }
+   input{
+    border-radius: 5px;
+   }
 </style>
