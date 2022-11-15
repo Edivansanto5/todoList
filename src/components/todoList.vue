@@ -1,5 +1,5 @@
 <template>
-     <div class="conteiner">
+    <div class="conteiner">
         <div class="title">
             <h1>Bem-Vindo ao Gerenciamento de Tarefas</h1>
         </div>
@@ -62,11 +62,9 @@ export default {
         fazendo2: false,
         mostrarAndamento:'Mostrar Atividades em Andamentos',
         mostrarAndamento2:'Mostrar Atividades Finalizado'
-        
+
         }
-        
-    },
-    
+    },   
     methods:{
         addLista(){ 
             this.listas.push(this.lista) // add um item na lista
@@ -86,8 +84,6 @@ export default {
             }else{
                 this.mostrarAndamento = 'Fechar lista Finalizados'
             }
-            
-
         },
         mostrarFeito(){
             this.fazendo2 = !this.fazendo2
@@ -131,24 +127,23 @@ export default {
         border-radius: 5px;
     }
     .btn-1{
-      margin: 14px;
+        margin: 14px;
     }
-   .div-main{
+    .div-main{
         text-align: justify;
         color: aqua;
         font-size: 20px;
         padding-left: 460px;
    } 
-   a{
-    color: red;
+   a {
+        color: red;
     
    }
-   .select,input,.btn{
-    font-size: 18px;
-    margin: 4px;
-   
+        .select,input,.btn{
+        font-size: 18px;
+        margin: 4px;
    }
-   input{
-    border-radius: 5px;
+    input{
+        border-radius: 5px;
    }
 </style>
