@@ -10,7 +10,7 @@
 
         <div v-for="(lista, index) in listas" :key="index" class="div-main">
             
-            <select>
+            <select class="select">
                 <option >A fazer</option>
                 <option >Fazendo</option>
                 <option >Feito</option>
@@ -64,24 +64,30 @@ export default {
         padding-top: 12px;
     }
     .status{
-        width: 72px;
+        width: 94px;
         margin: 14px;
-        font-size: 18;
+        font-size: 18px;
+        color:#383a47;
+        
+      
     }
     .btn{
-        
         margin: 14px;
-        
+        color:#383a47 ;
     }
    .div-main{
         text-align: justify;
         color: aqua;
         font-size: 20px;
-        padding-left: 504px;
+        padding-left: 460px;
    } 
-   :hover a{
+   a{
     color: red;
     
    }
-
+   .select,input,.btn{
+    font-size: 18px;
+    margin: 4px;
+   }
+   
 </style>
