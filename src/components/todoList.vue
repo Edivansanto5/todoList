@@ -5,9 +5,9 @@
     <button type="button" @click="addLista()" > Enviar</button>
 
     <div v-for="(lista, index) in listas" :key="index" >
-        <span>{{ lista.text }}</span> <a class="mr-10" href="#" @click="deleta">Excluir</a>
-        
+        <span>{{ lista.text }}</span> <a class="mr-10" @click="deleta"> <i class="fa-solid fa-trash-can"></i></a>
     </div>
+   
     <br>
   </div>
 </template>
@@ -30,7 +30,7 @@ export default {
         },
         deleta(){
         this.listas.pop(this.listas)
-        console.log('veio parar aqui');                                                            
+                                                                   
     
         }, 
     } 
