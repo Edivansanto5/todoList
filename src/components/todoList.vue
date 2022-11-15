@@ -17,12 +17,12 @@
             </select>
             <span class=" span"> {{ lista.text }} </span> <a class="mr-10" @click="deleta"> 
             <i class="fa-solid fa-trash-can"></i></a>
-            
-                
+              
         </div>
+        <br><br><br>
         <div>
             <button class="btn-1">Mostrar Atividades em Andamentos</button>
-            <button class="btn2">Mostrar Atividades Concluidas</button>
+            <button class="btn-2">Mostrar Atividades Concluidas</button>
         </div>
 
         <br>
@@ -83,6 +83,9 @@ export default {
         margin: 14px;
         color:#383a47 ;
         border-radius: 5px;
+    }
+    .btn-1{
+      margin: 14px;
     }
    .div-main{
         text-align: justify;
