@@ -9,13 +9,16 @@
         <button type="button" @click="addLista()" class="btn"> Enviar</button>
 
         <div v-for="(lista, index) in listas" :key="index" class="div-main">
-            <select class="select">
+
+            <select class="select" > 
+               
                 <option>A fazer</option>
-                <option >Fazendo</option>
+                <option>Fazendo</option>
                 <option>Feito</option>
             </select>
-            <span class=" span"> {{ lista.text }} </span> <a class="mr-10" @click="deleta"> 
+            <span class="span"> {{ lista.text }} </span> <a class="mr-10" @click="deleta"> 
             <i class="fa-solid fa-trash-can"></i></a>
+            
     
         </div>
         <br><br><br>
@@ -23,25 +26,26 @@
         <div>
             <button class="btn-1" @click="mostrarFazendo()">{{mostrarAndamento}}</button>
             
-            <button @click="mostrarFeito()">{{mostrarAndamento2}}</button>
+            <button class="btn-2" @click="mostrarFeito()">{{mostrarAndamento2}}</button>
         </div>
         <div v-if="fazendo">
             <h2>Lista de items em Andamentos</h2>
-            <ul>
-                <li>items</li>
-                <li>items</li>
-                <li>items</li>
-                <li>items</li>
+            
+            <ul >
+                <li>item1</li>
+                <li>item2</li>
+                <li>item3</li>
+                <li>item4</li>
             </ul>
 
         </div>
         <div v-if="fazendo2">
             <h2>Lista de items Finalizados</h2>
             <ul>
-                <li>items</li>
-                <li>items</li>
-                <li>items</li>
-                <li>items</li>
+                <li>item5</li>
+                <li>item6</li>
+                <li>item7</li>
+                <li>item8</li>
             </ul>
 
         </div>
@@ -55,13 +59,19 @@
 export default {
     name:'todoList',
         data(){
+           
         return{
-        lista: {},
-        listas: [],
-        fazendo:false,
-        fazendo2: false,
-        mostrarAndamento:'Mostrar Atividades em Andamentos',
-        mostrarAndamento2:'Mostrar Atividades Finalizado'
+            opcion:[
+                {id:1, name:'A Fazer'},
+                {id:2,  name:'Fazendo'},
+                {id:3, name:'Feito'}
+            ],
+            lista: {},
+            listas: [],
+            fazendo:false,
+            fazendo2: false,
+            mostrarAndamento:'Mostrar Atividades em Andamentos',
+            mostrarAndamento2:'Mostrar Atividades Finalizado'
 
         }
     },   
@@ -126,8 +136,11 @@ export default {
         color:#383a47 ;
         border-radius: 5px;
     }
-    .btn-1{
+    .btn-1,.btn-2{
         margin: 14px;
+        color:#383a47 ;
+        border-radius: 5px;
+        font-size: 14px;
     }
     .div-main{
         text-align: justify;
