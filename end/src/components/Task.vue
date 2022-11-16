@@ -29,12 +29,12 @@
       </div>
       <!-- buttons -->
       <div class="clearBtns">
-        <button @click="clearCompleted">Clear completed</button>
-        <button @click="clearAll">Clear all</button>
+        <button @click="clearCompleted">Fechar Atividades Completa</button>
+        <button @click="clearAll">Limpar Todos</button>
       </div>
       <!-- pending task -->
       <div class="pendingTasks">
-        <span>Pending Tasks: {{ incomplete }}</span>
+        <span>Tarefas Pendentes: {{ incomplete }}</span>
       </div>
     </div>
   </div>
