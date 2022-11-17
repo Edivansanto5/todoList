@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <li>
     <button @click.self="$emit('complete')" :class="className">
       <i class="far fa-circle"></i> {{ task.title }}
@@ -21,4 +21,4 @@ export default {
     }
   }
 };
-</script>
+</script> -->

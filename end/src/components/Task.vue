@@ -1,18 +1,12 @@
 <template>
   <div class="container">
     <div class="task">
-      <!-- title -->
-      <div class="title">
-        <h1> To Do List</h1>
-      </div>
+  
+      <div class="title"><h1> To Do List</h1></div>
+
       <!-- form -->
       <div class="form">
-        <input
-          type="text"
-          placeholder="New Task"
-          v-model="newTask"
-          @keyup.enter="addTask"
-        />
+        <input type="text" placeholder="Digite sua Tarefa aqui" v-model="newTask" @keyup.enter="addTask"/>
         <button @click="addTask"><i class="fas fa-plus"></i></button>
       </div>
       <!-- task lists -->
